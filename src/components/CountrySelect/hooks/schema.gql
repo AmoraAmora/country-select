@@ -1,0 +1,11 @@
+query Countries($filter: CountryFilterInput) {
+  countries(filter: $filter) {
+    ...CountryData
+  }
+}
+
+fragment CountryData on Country {
+    code
+    emoji
+    name
+}
